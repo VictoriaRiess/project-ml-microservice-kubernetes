@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=victoriariess/microsvrcapi
+tag=v0.1
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+echo "Docker ID and Image: $dockerpath tag: $tag"
+docker login -u victoriariess
+docker tag microsvrcapi:latest  $dockerpath:$tag
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath:$tag

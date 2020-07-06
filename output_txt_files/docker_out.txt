@@ -1,1 +1,31 @@
-<paste log output from Docker prediction, here>
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 416-282-693
+[2020-06-30 20:37:01,585] INFO in app: JSON payload:
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2020-06-30 20:37:01,596] INFO in app: Inference payload DataFrame:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-30 20:37:01,605] INFO in app: Scaling Payload:
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2020-06-30 20:37:01,608] INFO in app: prediction:
+[20.35373177134412]
+172.17.0.1 - - [30/Jun/2020 20:37:01] "POST /predict HTTP/1.1" 200 -
+
+
+<(.devops) ibriess@DESKTOP-HCCBCF0:/mnt/f/IBRIESS/PROJEKTE/udacity/4 Operationalize a Machine Learning Microservice API/DevOps_Microservices/project-ml-microservice-kubernetes$ source ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+(.devops) ibriess@DESKTOP-HCCBCF0:/mnt/f/IBRIESS/PROJEKTE/udacity/4 Operationalize a Machine Learning Microservice API/DevOps_Microservices/project-ml-microservice-kubernetes$
+paste log output from Docker prediction, here>
