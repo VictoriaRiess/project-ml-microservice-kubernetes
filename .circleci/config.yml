@@ -7,7 +7,7 @@ jobs:
 build:
 docker:
 # Use the same Docker base as the project
-- image: python:3.7.3-stretch
+- image: python:3.6.9
 
 working_directory: ~/repo
 
